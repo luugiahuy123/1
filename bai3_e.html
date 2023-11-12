@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraTamGiac(a, b, c) {
+        if (a + b > c && a + c > b && b + c > a) {
+            if (a === b && b === c) {
+                return "Tam giác đều";
+            } else if (a === b || a === c || b === c) {
+                return "Tam giác cân";
+            } else if (a * a + b * b === c * c || a * a + c * c === b * b || b * b + c * c === a * a) {
+                return "Tam giác vuông";
+            } else {
+                return "Tam giác bình thường";
+            }
+        } else {
+            return "Không phải là tam giác";
+        }
+    }
+
+    let a = +prompt("nhap canh 1");
+    let b = +prompt("nhap canh 2");
+    let c = +prompt("nhap canh 3");
+    document.write(kiemTraTamGiac(a, b, c));
+
+</script>
+</body>
+</html>
